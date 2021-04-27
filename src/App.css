@@ -23,6 +23,7 @@ body {
 .header {
   font-size: 68px;
   font-weight: 900;
+  text-align: center;
   color: #033535;
 }
 
@@ -52,6 +53,34 @@ body {
   border-radius: 10px;
   margin: 5px;
   padding: 15px 5px;
+  cursor: pointer;
+}
+@media screen and (max-width: 1090px) {
+  .card {
+    width: 30%;
+  }
+  .header {
+    font-size: 30px;
+    font-weight: 500;
+  }
+};
+@media screen and (max-width: 500px) {
+  .card {
+    width: 33.3%;
+  }
+  .header {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 605px) {
+  .card {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 305px) {
+  .card {
+    width: 85%;
+  }
 }
 .card a {
   text-decoration: none;
@@ -80,6 +109,7 @@ body {
 .footer {
   margin-top: 25px;
   background: #033535;
+  text-align: center;
   padding: 15px;
   color: #fff;
   display: flex;
@@ -87,5 +117,84 @@ body {
   justify-content: center;
   width: 100%;
   position: sticky;
+}
+.user-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #03353581;
+  height: 100vh;
+}
+
+.robot-credentials {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid #033535;
+  padding: 5px;
+}
+.info-block {
+  display: flex;
+}
+
+.robot-credentials div h3 {
+  text-transform: uppercase;
+  color: #033535;
+  margin-bottom: 15px;
+}
+
+.cred-1 {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  margin: 25px;
+  width: 100%;
+}
+.cred-2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  margin: 25px;
+  width: 100%;
+}
+
+.cred-1>div {
+  width: 33.3%;
+  margin: 15px;
+}
+
+.cred-2>div {
+  width: 33.3%;
+  margin: 15px;
+  margin-right: 0;
+}
+
+.image-block {
+  align-self: baseline;
+  width: 20%;
+  margin-right: 15px;
+  border: 3px solid #033535;
+  padding: 5px;
+  height: max-content;
+}
+.image-block img{
+  width: 100%;
+}
+
+.return-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 5vw;
+  color: #033535;
+  background-color: #033535;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+.return-btn img {
+  width: 100%;
 }
 
