@@ -55,33 +55,7 @@ body {
   padding: 15px 5px;
   cursor: pointer;
 }
-@media screen and (max-width: 1090px) {
-  .card {
-    width: 30%;
-  }
-  .header {
-    font-size: 30px;
-    font-weight: 500;
-  }
-};
-@media screen and (max-width: 500px) {
-  .card {
-    width: 33.3%;
-  }
-  .header {
-    font-size: 20px;
-  }
-}
-@media screen and (max-width: 605px) {
-  .card {
-    width: 45%;
-  }
-}
-@media screen and (max-width: 305px) {
-  .card {
-    width: 85%;
-  }
-}
+
 .card a {
   text-decoration: none;
   display: inline-block;
@@ -118,65 +92,76 @@ body {
   width: 100%;
   position: sticky;
 }
+
+.modal {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #6ba3a3;
+}
+
 .user-modal {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #03353581;
-  height: 100vh;
+  padding: calc(5vw + 15px);
+  width: 80%;
+  border-radius: 15px;
+  border: 1px solid  #03353581;
 }
 
 .robot-credentials {
   width: 70%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 3px solid #033535;
-  padding: 5px;
+  justify-content: space-between;
+  border: 3px outset #fff;
+  padding: 15px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  height: 100%;
 }
+
+.robot-credentials>div  {
+  width: 30%;
+}
+
 .info-block {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .robot-credentials div h3 {
   text-transform: uppercase;
   color: #033535;
   margin-bottom: 15px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.cred-1 {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px;
-  margin: 25px;
-  width: 100%;
-}
-.cred-2 {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px;
-  margin: 25px;
-  width: 100%;
-}
-
-.cred-1>div {
-  width: 33.3%;
-  margin: 15px;
-}
-
-.cred-2>div {
-  width: 33.3%;
-  margin: 15px;
-  margin-right: 0;
+.robot-credentials div p, .robot-credentials div a {
+  text-decoration: none;
+  color: #fff;
+  font-family: monospace;
 }
 
 .image-block {
-  align-self: baseline;
   width: 20%;
   margin-right: 15px;
-  border: 3px solid #033535;
+  margin-bottom: 30px;
+  border: 3px inset #fff;
   padding: 5px;
   height: max-content;
+  background: #033535;
+  border-radius: 50%;
+  align-self: flex-start;
+  overflow: hidden;
 }
 .image-block img{
   width: 100%;
@@ -187,7 +172,7 @@ body {
   position: absolute;
   top: 15px;
   left: 15px;
-  width: 5vw;
+  width: 50px;
   color: #033535;
   background-color: #033535;
   padding: 15px;
@@ -196,5 +181,42 @@ body {
 
 .return-btn img {
   width: 100%;
+}
+
+@media screen and (max-width: 1090px) {
+  .card {
+    width: 30%;
+  }
+  .header {
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .info-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-block {
+    align-self: auto;
+  }
+};
+
+@media screen and (max-width: 500px) {
+  .card {
+    width: 33.3%;
+  }
+  .header {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 605px) {
+  .card {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 305px) {
+  .card {
+    width: 85%;
+  }
 }
 

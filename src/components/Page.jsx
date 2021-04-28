@@ -51,8 +51,8 @@ class Page extends Component {
                 this.setState( {
                     users: consumableData,
                     retrievedUsers: consumableData,
+                    isLoading : false,
                 });
-                return;
         });
 
     }
@@ -78,34 +78,31 @@ class Page extends Component {
         };
         updateModal().then(() => {
             console.log(this.state.modalUser);
-        })
+        });
     };
 
-    componentWillMount= () => {
-        setTimeout(() => {
-            this.setState({
-                isLoading : false,
-            })
-        }, 2000);
-    };
+    returnModal = (bool) => {
+        if (bool) {
+            return <UserModal userData={this.state.modalUser} removeModal = {this.removeModal}/>;
+        }
+    }
     
     render() {
         if (this.state.isLoading){
             return <Loader />
         } else {
-            if(this.state.userModalVisible){
-                return <UserModal userData={this.state.modalUser} removeModal = {this.removeModal}/>;
-            } else {
-                return (
-                    <div className="page">
-                        <Header />
-                        <Search handleSearch = {this.handleSearchChange}/>
-                        <Container dataToPlot= {this.state.retrievedUsers} showModal={this.showModal}/>
-                        <Footer />
-                        
-                    </div>
-                );
-            };
+            return (
+                <div className="page">
+                    <Header />
+                    <Search handleSearch = {this.handleSearchChange}/>
+                    <Container dataToPlot= {this.state.retrievedUsers} showModal={this.showModal}/>
+                    <Footer />
+                    {
+                       this.returnModal(this.state.userModalVisible)
+                    }
+                    
+                </div>
+            );
         }
     };
 }
