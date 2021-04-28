@@ -40,7 +40,7 @@ class Page extends Component {
     }
 
     componentDidMount = () => {
-        fetch('http://localhost:3000/users')
+        fetch('http://jsonplaceholder.typicode.com/users')
             .then((response) => {
                 return response.json();
             })
