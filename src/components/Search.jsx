@@ -9,7 +9,7 @@ class Search extends Component {
 
     render() {
         return (
-            <input className="input" type="text" onChange = {this.props.handleSearch}/>
+            <input placeholder="Nom de votre robot" className="input" type="text" onChange = {this.props.handleSearch}/>
         );
     }
 }
