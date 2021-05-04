@@ -43,6 +43,7 @@ body {
   flex-wrap: wrap;
   width: 100vw;
   margin: 25px auto;
+  min-height: 80vh;
 }
 .card {
   display: flex;
