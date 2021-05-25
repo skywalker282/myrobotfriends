@@ -2,7 +2,7 @@
 const EmailBlock = (props) => {
     let formatedHREF = "mailto:" + props.email;
     return (
-        <a href={formatedHREF}>{props.email}</a>
+        <a className="user-emai" href={formatedHREF}>{props.email}</a>
     );
 };
 

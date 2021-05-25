@@ -108,6 +108,9 @@ body {
   padding: 15px 5px;
   cursor: pointer;
   position: relative;
+  .user-name {
+    color: #265a5a;
+  }
 }
 .overlay-menu {
   position: absolute;
@@ -115,7 +118,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #ffffff3f;
+  background-color: #265a5a0a;
   display: flex;
   ul {
     background-color: #409c9c;
@@ -198,7 +201,7 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: #409c9c33;
+  background-color: #409c9c54;
   .user-modal {
     display: flex;
     align-items: center;
@@ -208,18 +211,33 @@ body {
     width: 80%;
     border-radius: 8px;
     border: 1px solid #409c9c81;
-  }
-}
 
-.robot-credentials {
-  width: 70%;
-  display: flex;
-  justify-content: space-between;
-  border: 2px solid #265a5a;
-  padding: 15px;
-  border-radius: 10px;
-  flex-wrap: wrap;
-  height: 100%;
+    .image-block {
+      width: 20%;
+      margin-right: 15px;
+      margin-bottom: 30px;
+      border: 2px solid #265a5a;
+      padding: 5px;
+      height: max-content;
+      background: #409c9c;
+      border-radius: 50%;
+      align-self: flex-start;
+      overflow: hidden;
+    }
+    .robot-credentials {
+      width: 70%;
+      display: flex;
+      justify-content: space-between;
+      border: 2px solid #265a5a;
+      padding: 15px;
+      border-radius: 10px;
+      flex-wrap: wrap;
+      height: 100%;
+      h3 {
+        color: #265a5a;
+      }
+    }
+  }
 }
 
 .robot-credentials > div {
@@ -246,18 +264,6 @@ body {
   font-family: monospace;
 }
 
-.image-block {
-  width: 20%;
-  margin-right: 15px;
-  margin-bottom: 30px;
-  border: 2px solid #fff;
-  padding: 5px;
-  height: max-content;
-  background: #409c9c;
-  border-radius: 50%;
-  align-self: flex-start;
-  overflow: hidden;
-}
 .image-block img {
   width: 100%;
 }
@@ -321,7 +327,7 @@ body {
   right: 0;
   left: 0;
   bottom: 0;
-  background: #ffffff31;
+  background: #265a5a52;
   .modal-form {
     position: fixed;
     padding: 10px;
@@ -374,7 +380,7 @@ body {
   right: 0;
   left: 0;
   bottom: 0;
-  background: #ffffff23;
+  background: #265a5a54;
   display: flex;
   justify-content: center;
   align-items: center;

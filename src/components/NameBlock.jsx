@@ -1,7 +1,7 @@
 
 const NameBlock = (props) => {
     return (
-        <p>{props.name}</p>
+        <p className="user-name">{props.name}</p>
     )
 }
 

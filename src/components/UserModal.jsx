@@ -9,9 +9,13 @@ import Company from './CompanyBlock';
 import Website from './WebsiteBlock';
 import arrowBack from './back-arrow.svg'
 import { useEffect } from 'react';
-import Loader from '../Loader';
 
 const UserModal = (props) => {
+
+    let handleModalDismiss = event => {
+        event.stopPropagation();
+        props.removeModal();
+    }
 
     let imgPaceholder = 'https://robohash.org/';
 
@@ -27,13 +31,10 @@ const UserModal = (props) => {
             })
     })
 
-    if(userInfo !== '') {
+    if (userInfo !== "") {
         return (
-            <div className="modal">
+            <div className="modal" onClick={handleModalDismiss}>
                 <div className="user-modal">
-                <div className='return-btn' onClick={props.removeModal}>
-                    <img src={arrowBack} /> 
-                </div>
                 <div className="info-block">
                     <div className="image-block">
                         <Image imgSrc={imgPaceholder + props.ID}/>
@@ -69,11 +70,10 @@ const UserModal = (props) => {
             </div>
             </div>
         );
-    }
-    else {
+    } else {
         return (
-            <Loader />
-        )
+            ''
+        );
     }
 }
 
