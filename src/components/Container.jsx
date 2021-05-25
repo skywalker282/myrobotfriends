@@ -9,7 +9,7 @@ const Container = (props) => {
         <div className="container">
             {
                 props.dataToPlot.map((user) => {
-                    return <RobotCard key={user.id} userID={user.id} name={user.name} email={user.email} showModal={props.showModal}/>
+                    return <RobotCard key={user.id} userID={user.id} name={user.name} email={user.email} handleCardMenu={props.handleCardMenu}/>
                 })
             }
         </div>
